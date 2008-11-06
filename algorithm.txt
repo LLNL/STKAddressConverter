@@ -1,0 +1,46 @@
+inputs:  library, rail, column, side, row
+
+
+sanity checks:
+     library >= 1
+     1 <=  rail  <= 4
+    -2 <= column <= 2 and column != 0
+     side == 1
+     1 <=  row   <= 4
+
+
+calculate ACSLS LSM
+    ( (4 * (library - 1)) + rail ) - 1
+
+
+calculate ACSLS drive ID
+2 dimensional array of ACSLS drive IDs:
+    2  1 -1 -2
+  +--+--+--+--+
+0 |12| 8| 4| 0| 1
+  +--+--+--+--+
+1 |13| 9| 5| 1| 2
+  +--+--+--+--+
+2 |14|10| 6| 2| 3
+  +--+--+--+--+
+3 |15|11| 7| 3| 4
+  +--+--+--+--+
+    0  1  2  3
+
+we'll use the column and row to index into the above array.
+
+SL8500 row to Perl row is easy -> subtract 1
+
+SL8500 column to Perl column:
+    multiply by -1
+	SL8500 column numbers:  -2 -1  1  2
+          Perl column numbers:   0  1  2  3
+    if negative, add 2
+    if positive, add 1
+	SL8500 column numbers:   0  1  2  3
+	  Perl column numbers:   0  1  2  3
+
+index into array using Perl row,column that we've calcuated to retrieve ACSLS drive ID
+
+
+outputs:  LSM, drive ID, (return error)
