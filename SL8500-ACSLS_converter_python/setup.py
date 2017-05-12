@@ -27,20 +27,20 @@ setup(
 
     long_description = long_description,
 
-    url = 'https://lc.llnl.gov/bitbucket/projects/DSG/repos/acs2internal',
+    url = 'https://lc.llnl.gov/bitbucket/projects/DSG/repos/sl8500_acsls_converter/browse/SL8500-ACSLS_converter_python',
 
     author = 'Huy Le',
 
     author_email = 'le35@llnl.gov',
 
-    license = 'Proprietary',
+    license = 'Apache',
 
     classifiers = [
         'Development Status :: 5 - Production/Stable',
         'Environment :: Console',
         'Environment :: MacOS X',
         'Intended Audience :: Developers',
-        'License :: Other/Proprietary License',
+        'License :: OSI Approved :: Apache Software License',
         'Operating System :: MacOS :: MacOS X',
         'Operating System :: POSIX :: Linux',
         'Operating System :: Unix',
