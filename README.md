@@ -41,4 +41,5 @@ For now, the converters offered are:
 StorageTek library addressing scheme to ACSLS' scheme
 * *SL8500<->ACSLS_converter_python*: a Python module that can be imported or run as
 a standalone program. It converts both ways between StorageTek library address
-and ACSLS address schemes.
+and ACSLS address schemes. This module is meant to be built into a wheel that
+can be `pip install`'d.
