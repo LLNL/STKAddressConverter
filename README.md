@@ -61,18 +61,22 @@ Installing the pip library from this folder
 
 Module usage
 
->from acs2internal import acs2internal
->
->internal_address =
->acs2internal.acsls_addr_to_internal_addr(acs_address="1,10,1,4")
->print(internal_address)
->
->> 3,3,-1,1,1
+```
+from acs2internal import acs2internal
 
->from acs2internal import acs2internal
->
->acs_address =
->acs2internal.internal_addr_to_acsls_addr(internal_address="3,3,-1,1,1")
->print(acs_address)
->
->> 1,10,1,4
+internal_address =
+acs2internal.acsls_addr_to_internal_addr(acs_address="1,10,1,4")
+print(internal_address)
+
+> 3,3,-1,1,1
+```
+
+```
+from acs2internal import acs2internal
+
+acs_address =
+acs2internal.internal_addr_to_acsls_addr(internal_address="3,3,-1,1,1")
+print(acs_address)
+
+> 1,10,1,4
+```
