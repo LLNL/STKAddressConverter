@@ -43,3 +43,34 @@ StorageTek library addressing scheme to ACSLS' scheme
 a standalone program. It converts both ways between StorageTek library address
 and ACSLS address schemes. This module is meant to be built into a wheel that
 can be `pip install`'d.
+
+Build the Python Package
+========================
+
+Creating the .whl
+
+    python setup.py bdist_wheel
+    Creating the tar.gz
+    python setup.py sdist
+
+Installing the pip library from this folder
+
+    pip install acs2internal
+
+Module usage
+
+    from acs2internal import acs2internal
+    
+    internal_address =
+    acs2internal.acsls_addr_to_internal_addr(acs_address="1,10,1,4")
+    print(internal_address)
+
+    > 3,3,-1,1,1
+
+    from acs2internal import acs2internal
+    
+    acs_address =
+    acs2internal.internal_addr_to_acsls_addr(internal_address="3,3,-1,1,1")
+    print(acs_address)
+    
+    > 1,10,1,4
