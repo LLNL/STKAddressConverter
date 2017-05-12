@@ -50,7 +50,9 @@ Build the Python Package
 Creating the .whl
 
     python setup.py bdist_wheel
-    Creating the tar.gz
+
+Creating the source dist package
+
     python setup.py sdist
 
 Installing the pip library from this folder
@@ -59,18 +61,18 @@ Installing the pip library from this folder
 
 Module usage
 
-    from acs2internal import acs2internal
-    
-    internal_address =
-    acs2internal.acsls_addr_to_internal_addr(acs_address="1,10,1,4")
-    print(internal_address)
+>from acs2internal import acs2internal
+>
+>internal_address =
+>acs2internal.acsls_addr_to_internal_addr(acs_address="1,10,1,4")
+>print(internal_address)
+>
+>> 3,3,-1,1,1
 
-    > 3,3,-1,1,1
-
-    from acs2internal import acs2internal
-    
-    acs_address =
-    acs2internal.internal_addr_to_acsls_addr(internal_address="3,3,-1,1,1")
-    print(acs_address)
-    
-    > 1,10,1,4
+>from acs2internal import acs2internal
+>
+>acs_address =
+>acs2internal.internal_addr_to_acsls_addr(internal_address="3,3,-1,1,1")
+>print(acs_address)
+>
+>> 1,10,1,4
