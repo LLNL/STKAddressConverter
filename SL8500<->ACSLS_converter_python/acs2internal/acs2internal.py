@@ -1,16 +1,10 @@
 #!/usr/bin/env python
-###########################################################################
-# $URL: file:///var/svn/cfengine/llnl/admin/dsgscripts/set_lto5_config/acs2internal.py $
-# $Author: py $
-# $Date: 2016-12-12 08:01:31 -0800 (Mon, 12 Dec 2016) $
-# $Rev: 23920 $
-###########################################################################
 #
 # Huy Le
 # 11/14/2016
 #
-# Converts LTO5 ACSLS Drive Address to Internal Address.
-# Converts LTO5 Internal Address to ACSLS Drive Address.
+# Converts ACSLS Drive Address to Internal Address.
+# Converts Internal Address to ACSLS Drive Address.
 #
 # Usage: python acs2internal.py -d 1,10,1,4
 # Example: 1,10,1,4 to 3,3,-1,1,1
@@ -126,7 +120,7 @@ def acsls_addr_to_internal_addr(acs_address=None):
 
     row = array_row + 1
 
-    # LTO5 rolumns can be one of four values:
+    # columns can be one of four values:
     # 2 1 -1 -2
     # We translate the column index to the rolumn.
     # And we multiply the -1 to get one of the four values.
@@ -142,7 +136,8 @@ def acsls_addr_to_internal_addr(acs_address=None):
     library = (lsm / 4) + 1
     rail = (lsm % 4) + 1
 
-    # side is always 1 because LTO5 will always be a tape.
+    # side is always 1 because tape drive bays only exist on side 1 of the
+    # library
     side = 1
 
     internal_address = str(library) + "," + \
@@ -222,8 +217,8 @@ def internal_addr_to_acsls_addr(internal_address=None):
     # Convert LT05 row to array row.
     array_row = row - 1
 
-    # Convert the LTO5 rolumn to array rolumn.
-    # LTO5 rolumns can be one of four values:
+    # Convert the column to array column.
+    # columns can be one of four values:
     # 2 1 -1 -2
     # and we need to translate them into a valid array rolumn to index
     # into the array defined at the top of the function. Thus. multiplying by
