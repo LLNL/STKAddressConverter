@@ -29,18 +29,18 @@ calculate ACSLS drive ID
 
 we'll use the column and row to index into the above array.
 
-SL8500 row to Perl row is easy -> subtract 1
+SL8500 row to array row is easy -> subtract 1
 
-SL8500 column to Perl column:
+SL8500 column to array column:
     multiply by -1
 	SL8500 column numbers:  -2 -1  1  2
-          Perl column numbers:   0  1  2  3
+     array column numbers:   0  1  2  3
     if negative, add 2
     if positive, add 1
 	SL8500 column numbers:   0  1  2  3
-	  Perl column numbers:   0  1  2  3
+	 arrau column numbers:   0  1  2  3
 
-index into array using Perl row,column that we've calcuated to retrieve ACSLS drive ID
+index into array using array row,column that we've calcuated to retrieve ACSLS drive ID
 
 
 outputs:  LSM, drive ID, (return error)
