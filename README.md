@@ -55,7 +55,7 @@ Creating the source dist package
 
     python setup.py sdist
 
-Installing the pip library from this folder
+Installing the pip library
 
     pip install acs2internal
 
