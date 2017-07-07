@@ -1,8 +1,8 @@
 STK Address Converter
----------------------
+=====================
 
 Overview
-========
+--------
 
 Oracle StorageTek tape libraries have an addressing scheme that looks like:
 
@@ -32,7 +32,7 @@ is referred to by StorageTek tape libraries exclusively as:
     2,1,-1,1,1 
 
 Converters
-==========
+----------
 
 A couple different flavors of converters are initially offered here. More may be
 offered in the future as the need arises. Contributions of more converters are
@@ -48,7 +48,7 @@ and ACSLS address schemes. This module is meant to be built into a wheel that
 can be `pip install`'d.
 
 Build the Python Package
-========================
+------------------------
 
 Creating the .whl
 
