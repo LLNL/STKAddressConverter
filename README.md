@@ -11,7 +11,7 @@ Oracle StorageTek tape libraries have an addressing scheme that looks like:
     R: Row
 
 The software that controls Oracle StorageTek tape libraries, ACSLS, has an
-incompatible addressing scheme that looks like:
+different addressing scheme that looks like:
 
     A,L,1,D
     A: ACS
@@ -19,7 +19,7 @@ incompatible addressing scheme that looks like:
     D: Drive #
 
 Even though ACSLS and StorageTek libraries work hand-in-hand, their drive
-addressing and indentification schemes differ and are incompatible. For example,
+addressing and indentification schemes differ. For example,
 a drive known by ACSLS as:
 
     1,4,1,4
