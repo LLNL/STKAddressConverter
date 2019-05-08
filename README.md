@@ -59,7 +59,7 @@ Example: 1,10,1,4 to 3,3,-1,1,1
 3,3,-1,1,1
 ```
 
-### Converting LTO5 Internal Address to HLI-PRC Address
+### Converting SL8500 Internal Address to ACSLS Address
 
 Example: 3,3,-1,1,1 to 1,10,1,4 
 
